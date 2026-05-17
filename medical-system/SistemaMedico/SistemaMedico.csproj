@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E87DCD3C-A457-47A3-88E4-B3FCAFE77C96}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SistemaMedico</RootNamespace>
+    <AssemblyName>SistemaMedico</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphaBlendTextBox">
+      <HintPath>C:\Users\Pedro\Documents\AlphaBlendTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agendacli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agendacli.Designer.cs">
+      <DependentUpon>Agendacli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroCli.Designer.cs">
+      <DependentUpon>CadastroCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\agendaDAO.cs" />
+    <Compile Include="DAO\clienteDAO.cs" />
+    <Compile Include="DAO\medicoDAO.cs" />
+    <Compile Include="Entidades\agendaENT.cs" />
+    <Compile Include="Entidades\clienteENT.cs" />
+    <Compile Include="Entidades\medicoENT.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medico.Designer.cs">
+      <DependentUpon>Medico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Moldel\agendaMODEL.cs" />
+    <Compile Include="Moldel\clienteMODEL.cs" />
+    <Compile Include="Moldel\medicoMODEL.cs" />
+    <Compile Include="SistemaMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SistemaMedico.Designer.cs">
+      <DependentUpon>SistemaMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Agendacli.resx">
+      <DependentUpon>Agendacli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroCli.resx">
+      <DependentUpon>CadastroCli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medico.resx">
+      <DependentUpon>Medico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SistemaMedico.resx">
+      <DependentUpon>SistemaMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_man_usersearch_thesearch_theclient_2356.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_2312.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_delete_deleteusers_delete_male_user_maleclient_2348.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_man_usersearch_thesearch_theclient_2356 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_23121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfer_man_employee_user_avatar_arrow_refresh_icon_141997.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5dicasdedecoracaoparaconsultoriosodontologicos.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-out-option_icon-icons.com_73413.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3643769-building-home-house-main-menu-start_113416.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\construction_home_house_building_icon_153243.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_user_customer_man_male_man_boy_people_1687.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Planner-80_icon-icons.com_57289.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azul-claro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Planner-80_icon-icons.com_572891.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-out-option_icon-icons.com_734131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_3622.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_36221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-out-option_icon-icons.com_734132.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mesa de trabajo 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mesa de trabajo 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mesa de trabajo 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mesa de trabajo 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\277698-P670X8-570.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ORSCEI1-[Converted].jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ORSCEI1-[Converted]1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor_icon_134842.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical_result_health_document_virus_medical_coronavirus_icon_140389.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fever_temperature_high_feverishness_coronavirus_symptoms_covid_icon_141610.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-with-spring-binder-and-date-blocks_icon-icons.com_73645.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486486315-archive-archives-files-hosting-database-server-storage_81222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-with-spring-binder-and-date-blocks_icon-icons.com_736451.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fever_temperature_high_feverishness_coronavirus_symptoms_covid_icon_1416101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical_result_health_document_virus_medical_coronavirus_icon_1403891.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prescription_icon-icons.com_58843.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor_icon_1348421.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486486315-archive-archives-files-hosting-database-server-storage_812221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login-Pedrinho2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4354147.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency_exit_signaling_door_signs_direction_arrow_icon_128559.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitdoor_87195 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4450.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20073.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OJ8XZR0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16956.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OQ6UTW0.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
