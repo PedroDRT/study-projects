@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 80px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+img {
+  border-radius: 28px;
+  width: 100%;
+}
+
+ul li::marker {
+  color: #333333;
+}
+
+main section img {
+  height: 375px;
+  object-fit: cover;
+  margin-top: 44px;
+}
+.headline + h1 {
+  margin-top: 8px;
+}
+
+.headline + h2 {
+  margin-top: 2px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+h1, h2, h3 {
+  color: #1B1B1B;
+}
+
+img + h3{
+  margin-top: 20px;
+}
+
+ul {
+  padding-left: 24px;
+}
+
+li {
+  font-size: 16px;
+  color: #0C51A7;
+}
+
+footer {
+  padding-top: 65px;
+  text-align: center;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 36px 0;
+  background-color: #d9d9d9;
+}
+
+.headline {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #e1624f;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 22px;
+  font-style: italic; 
+  text-align: center;
+  color: #333333;
+  margin-top: 24px;
+}
+
+.description {
+  font-size: 16px;
+  color: #333333;
+}
+
+.list-content li {
+  color: #E5245E;
+}
+
+.list-content li:first-child {
+  color: #591B98;
+}
+
+.list-content li:last-child {
+  color: #E95E10;
+}
+
+.considerations {
+  text-align: center;
+}
